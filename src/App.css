@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --shadow: #fd6f21;
+    --ring: currentColor;
+    --blend1: #fc5830;
+    --blend2: #f98c24;
+    --blend-from: 0%;
+    --blend-to: 100%;
+    --blend-dir: top right;
+}
+
+
+body{
+    font-family: Outfit, sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+}
+
+.main-image-summer:before {
+    content: '';
+    background: url("./Images/summer.jpg") no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.main-image-cold:before {
+    content: '';
+    background: url('./Images/winter.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.main-image-default:before {
+    content: '';
+    background: url('./Images/weather.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.heading-text{
+    font-size: 7rem;
+}
+
+.weather-kind{
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+
+}
+
+.temp-display-sec{
+    margin-top: 8rem;
+}
+
+.weather-detail-sec{
+    width: 100%;
+    margin: 20rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.search-input{
+    margin-top: 3rem;
+    padding: .7rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+.search-input:hover{
+    transform: scale(1.05,1.05);
+}
+.search-input:focus{
+    outline: none;
+    transform: scale(1.05,1.05);
+}
+
+.weather-img{
+    max-width: 90px;
+    max-height: 50px;
+}
+
+::placeholder{
+    color: white;
+}
+
+.error-message{
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+
+
+
+@media only screen and (max-width: 425px) {
+    .heading-text {
+        font-size: 2rem;
+    }
+
+    .search-input {
+        margin-top: 3rem;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border-radius: 20px;
+    }
+}
